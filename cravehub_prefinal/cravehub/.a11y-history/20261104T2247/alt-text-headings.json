@@ -1,0 +1,28 @@
+{
+  "skill": "alt-text-headings",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/ProductImage.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "ALT-001",
+      "wcag": "1.1.1 A",
+      "severity": "minor",
+      "confidence": "medium",
+      "location": "src/App.jsx:670",
+      "summary": "The cart product image alternative repeated the adjacent product heading.",
+      "fix": "Give the cart image an empty alternative and support decorative alternatives in ProductImage.",
+      "evidence": "A product name was announced by both the image and the heading."
+    }
+  ],
+  "passed": [
+    "Cart, checkout, and confirmation have one H1 each and coherent heading levels.",
+    "The document title, skip link, main landmark, and footer landmark are present.",
+    "Cart product images are now decorative because their adjacent headings identify the products."
+  ],
+  "notes": [
+    "Findings were recorded before their indicated fixes; the final implementation was verified afterward."
+  ]
+}

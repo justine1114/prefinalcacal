@@ -1,0 +1,17 @@
+{
+  "skill": "modal-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "The dialog uses showModal(), providing modal semantics, background inertness and focus containment.",
+    "Opening the native dialog moves focus inside; its first focusable element is the visible close button, and native closing restores focus.",
+    "Escape and backdrop clicks dismiss the dialog.",
+    "The dialog is labeled by its heading, and the email and password inputs have associated labels."
+  ],
+  "notes": [
+    "The Navbar trigger implementation was outside the requested scope, so its element semantics could not be verified."
+  ]
+}

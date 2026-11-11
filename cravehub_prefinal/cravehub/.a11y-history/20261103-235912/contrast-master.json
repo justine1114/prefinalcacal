@@ -1,0 +1,51 @@
+{
+  "skill": "contrast-master",
+  "scope": [
+    "src/App.css",
+    "src/index.css",
+    "src/App.jsx",
+    "src/components/ImageField.jsx",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx",
+    "src/components/ProductForm.jsx",
+    "src/components/ProductImage.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "CONTRAST-001",
+      "wcag": "1.4.3 AA",
+      "severity": "moderate",
+      "location": "src/App.css:127,384",
+      "summary": "Yellow brand and hero text has insufficient contrast against white and cream backgrounds.",
+      "fix": "Replace #edb43a with a darker text color that reaches at least 3:1 on the hero cream and white header backgrounds.",
+      "evidence": "#edb43a measures 1.88:1 on #fff and 1.78:1 on #fff8eb; both uses are large text and require 3:1."
+    },
+    {
+      "rule": "CONTRAST-002",
+      "wcag": "1.4.11 AA",
+      "severity": "moderate",
+      "location": "src/App.css:519,1054,1076,1264,1340",
+      "summary": "Several input and select boundaries are too low-contrast to identify the controls against white backgrounds.",
+      "fix": "Darken the borders for form fields, search fields, selects and URL inputs so their boundaries reach at least 3:1 against adjacent backgrounds.",
+      "evidence": "#ded4c7 against white is 1.46:1; --line (#e7dccb) against white is 1.36:1."
+    },
+    {
+      "rule": "FOCUS-001",
+      "wcag": "2.4.7 AA",
+      "severity": "moderate",
+      "location": "src/App.css:544-546",
+      "summary": "Keyboard focus is visually suppressed on both product-search inputs.",
+      "fix": "Restore a visible focus outline on the search inputs, or provide an equally visible :focus-visible style on their wrappers.",
+      "evidence": "Both input :focus-visible rules set outline: none."
+    },
+    {
+      "rule": "FOCUS-002",
+      "wcag": "2.4.7 AA",
+      "severity": "moderate",
+      "location": "src/App.css:332-333; src/App.jsx:607,784",
+      "summary": "Route changes move focus to the main element, but its focus indicator is removed.",
+      "fix": "Provide a visible focus style for main instead of outline: none.",
+      "evidence": "mainRef.current.focus() targets the tabindex=-1 main element; main:focus removes the outline."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "skill": "live-region-controller",
+  "scope": [
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Cart additions and removals update the persistent polite status region with existing messages; removing the last item also moves focus to the cart heading."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/index.css",
+    "src/components/ProductCard.jsx",
+    "src/components/ProductImage.jsx",
+    "src/components/Navbar.jsx",
+    "src/components/ProductForm.jsx",
+    "src/components/ImageField.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "KBD-FOCUS-REMOVAL",
+      "wcag": "2.4.3 AA",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:763",
+      "summary": "Deleting a product removes the focused row and its Delete button, leaving keyboard focus at the document body and losing the user's place.",
+      "fix": "After deletion, focus the next row's action, otherwise the previous row's action, or Add New Product when the table becomes empty.",
+      "evidence": "deleteProduct filters the product out of the list without assigning focus."
+    },
+    {
+      "rule": "KBD-FOCUS-REMOVAL",
+      "wcag": "2.4.3 AA",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:466",
+      "summary": "Removing a cart item removes the focused Remove button, leaving keyboard focus at the document body and losing the user's place.",
+      "fix": "After removal, focus the next item's Remove button, otherwise the previous item's button, or the cart heading when the cart becomes empty.",
+      "evidence": "The Remove button calls onRemove; the resulting item list no longer renders its focused row."
+    }
+  ],
+  "passed": [
+    "Product-card image and action controls follow DOM order; responsive card styles do not reorder the focus sequence.",
+    "Visible :focus-visible styles apply to buttons and links, including product-card controls.",
+    "The skip link precedes navigation, and route changes focus the main content.",
+    "A focused browser Tab check followed the image button, the enabled View Details action, and the next card image button; the visible focus outline appeared on View Details."
+  ],
+  "notes": [
+    "The dedicated accessibility keyboard scanner could not run because its Playwright dependency is unavailable; a targeted keyboard sequence was checked in the integrated browser."
+  ]
+}

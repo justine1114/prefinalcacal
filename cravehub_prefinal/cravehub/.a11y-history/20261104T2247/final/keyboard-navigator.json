@@ -1,0 +1,16 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Invalid checkout data focuses the first invalid field.",
+    "Removing a cart item moves focus to the next or previous remove control; removing the last item focuses the cart heading.",
+    "Keyboard focus styles are present on links and form controls."
+  ],
+  "notes": [
+    "The accessibility-agent Playwright scanner could not run because Playwright is not installed; the integrated browser was used to verify checkout validation and removal focus."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "skill": "live-region-controller",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "LIVE-REGION-003",
+      "wcag": "4.1.3 AA",
+      "severity": "minor",
+      "confidence": "medium",
+      "location": "src/App.jsx:MenuPage and ProductManagementPage result counts",
+      "summary": "Menu and management result counts update on every search keystroke, which can create frequent live announcements.",
+      "fix": "Keep visual filtering immediate, but debounce the live result announcement until input pauses or announce only the settled count.",
+      "evidence": "Both search views update their live result counts on each input change."
+    }
+  ],
+  "passed": [
+    "Homepage Add to Cart uses the shared cart handler and provides a success notice without a competing cart-count live announcement.",
+    "Menu search describes the current result count, including after category navigation."
+  ]
+}

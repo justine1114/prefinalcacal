@@ -1,0 +1,17 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/components/ProductForm.jsx",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Specifications textarea is a labeled, natively keyboard-operable control with a visible focus style.",
+    "Product details specifications are informational text and do not require keyboard focus.",
+    "Form control order follows the DOM and visible sequence."
+  ],
+  "notes": [
+    "The accessibility-agent Playwright keyboard scanner was unavailable because Playwright is not installed in the workspace; form interaction and browser rendering were tested separately."
+  ]
+}

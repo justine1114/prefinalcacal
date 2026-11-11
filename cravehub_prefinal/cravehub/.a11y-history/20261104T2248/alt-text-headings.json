@@ -1,0 +1,11 @@
+{
+  "skill": "alt-text-headings",
+  "scope": [
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Empty-cart SVG is decorative and correctly excluded from the accessibility tree with aria-hidden=\"true\" and focusable=\"false\"; it does not need alternative text.",
+    "Empty-cart heading structure is logical: the page H1 \"Your cart\" precedes the section H2 \"Your cart is empty\"."
+  ]
+}

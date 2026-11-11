@@ -1,0 +1,37 @@
+{
+  "skill": "aria-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [
+    {
+      "rule": "ARIA-CART-REMOVE-NAME",
+      "wcag": "2.4.6 AA",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:704",
+      "summary": "Cart remove buttons were named only “Remove,” so assistive technology users could not distinguish the affected product.",
+      "fix": "Include the product name in each remove button's accessible name.",
+      "evidence": "Cart rows originally rendered an unlabeled “Remove” button."
+    },
+    {
+      "rule": "CART-REMOVE-FOCUS",
+      "wcag": "2.4.3 A",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:704",
+      "summary": "Removing a cart row removed the focused button without moving focus to a useful remaining element.",
+      "fix": "Move focus to the next or previous remove button, or the cart heading when the last item is removed.",
+      "evidence": "The focused remove button is unmounted after its row is deleted."
+    }
+  ],
+  "passed": [
+    "Checkout inputs have explicit labels and field errors are associated with aria-describedby.",
+    "Route changes move focus to the main content and update the page title.",
+    "The remove buttons now include product names, and removal moves focus to a remaining button or the cart heading."
+  ],
+  "notes": [
+    "Findings were recorded before their indicated fixes; the final implementation was verified afterward."
+  ]
+}

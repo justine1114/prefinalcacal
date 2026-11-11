@@ -1,0 +1,38 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [
+    {
+      "rule": "KEY-001",
+      "wcag": "2.4.3 A",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:704",
+      "summary": "Removing a cart item removed the focused control without moving focus to a useful element.",
+      "fix": "Move focus to the next or previous item control, or to the cart heading when the list becomes empty.",
+      "evidence": "The Remove button is unmounted with its cart row."
+    },
+    {
+      "rule": "KEY-002",
+      "wcag": "3.3.1 A",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:928-970",
+      "summary": "Order type and payment errors were not programmatically associated with their radio controls.",
+      "fix": "Give each group error an ID and reference it from the radio controls with aria-describedby.",
+      "evidence": "The group error paragraphs initially had no descriptions linked to their controls."
+    }
+  ],
+  "passed": [
+    "Cart controls, checkout form fields, radio buttons, and navigation use native interactive elements.",
+    "The skip link and route changes provide predictable focus behavior.",
+    "Invalid customer fields receive focus; cart deletion now focuses the next item or cart heading."
+  ],
+  "notes": [
+    "The automated Playwright accessibility scanner could not run because Playwright is not installed; interaction and responsive behavior were tested in the integrated browser.",
+    "Findings were recorded before their indicated fixes; the final implementation was verified afterward."
+  ]
+}

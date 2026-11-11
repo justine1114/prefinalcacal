@@ -1,0 +1,25 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.css",
+    "src/App.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "KEYBOARD-001",
+      "wcag": "2.4.7 AA",
+      "severity": "moderate",
+      "location": "src/App.jsx:190-194",
+      "summary": "Activating either hero button scrolls to the menu but leaves keyboard focus on the now off-screen button.",
+      "fix": "Use links to the menu section and move focus to its heading or section after navigation; make the focus target programmatically focusable with tabindex=\"-1\".",
+      "evidence": "Both buttons call scrollToSection('menu-section'); scrollToSection only calls scrollIntoView."
+    }
+  ],
+  "passed": [
+    "Hero buttons are native buttons and appear in a logical DOM and visual order at desktop, tablet, and mobile breakpoints.",
+    "Hero buttons have a visible :focus-visible outline."
+  ],
+  "notes": [
+    "This keyboard focus issue predates the visual-only CSS update; no hero markup or interaction behavior was changed."
+  ]
+}

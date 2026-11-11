@@ -1,0 +1,27 @@
+{
+  "skill": "forms-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [
+    {
+      "rule": "FORM-REQUIRED-001",
+      "wcag": "3.3.2 A",
+      "severity": "moderate",
+      "confidence": "high",
+      "location": "src/App.jsx:842",
+      "summary": "Required checkout fields had no visible required-field indication.",
+      "fix": "Add a visible Required marker to required labels and explain the marker near the form heading.",
+      "evidence": "The inputs had required attributes but no visible cue."
+    }
+  ],
+  "passed": [
+    "Checkout labels, autocomplete values, required semantics, email and Philippine phone validation, field error associations, and focus-on-error work.",
+    "Order Type and Payment Method use native radio buttons in fieldsets with legends.",
+    "Required indicators and their explanatory text are now visible."
+  ],
+  "notes": [
+    "Findings were recorded before their indicated fixes; the final implementation was verified afterward."
+  ]
+}

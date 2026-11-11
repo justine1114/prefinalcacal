@@ -1,0 +1,31 @@
+{
+  "skill": "alt-text-headings",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/ProductImage.jsx",
+    "src/components/ProductCard.jsx",
+    "src/components/ImageField.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "ALT-REDUNDANT",
+      "wcag": "1.1.1 A",
+      "severity": "minor",
+      "confidence": "high",
+      "location": "src/App.jsx:219,379,441",
+      "summary": "Product thumbnails add repeated or extraneous names to category-button, cart-row, and inventory-row announcements.",
+      "fix": "Allow context-specific alt text and use alt=\"\" for these thumbnails when the visible category or adjacent product name already identifies the control or item.",
+      "evidence": "ProductImage always sets alt={product.name}; these uses also render the category label or adjacent product name.",
+      "component": "ProductImage"
+    }
+  ],
+  "passed": [
+    "Catalog and search cards use a semantic img with product-name alt text; their detail buttons have explicit action labels.",
+    "Detail images and management previews retain image alternatives, including a named fallback when an image fails to load.",
+    "File and URL previews use the current product name as alt text; responsive object-fit sizing preserves the full image without replacing it with a CSS background."
+  ],
+  "notes": [
+    "Custom uploaded or URL images vary at runtime, so their content-to-name match cannot be verified from source alone."
+  ]
+}

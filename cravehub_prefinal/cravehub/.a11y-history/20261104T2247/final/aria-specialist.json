@@ -1,0 +1,18 @@
+{
+  "skill": "aria-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/ProductImage.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Checkout fields have explicit labels and field errors are associated with their inputs.",
+    "Order Type and Payment Method use labeled fieldsets and radio controls linked to the checkout form.",
+    "Cart remove buttons identify their product, and cart image alternatives do not repeat adjacent names.",
+    "Status and page focus behavior support cart changes, validation, and route changes."
+  ],
+  "notes": [
+    "The final state was verified after correcting the issues recorded in the accompanying pre-fix review."
+  ]
+}

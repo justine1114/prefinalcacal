@@ -1,0 +1,47 @@
+{
+  "skill": "aria-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/components/ImageField.jsx",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx",
+    "src/components/ProductForm.jsx",
+    "src/components/ProductImage.jsx",
+    "index.html"
+  ],
+  "findings": [
+    {
+      "rule": "ARIA-NAME-001",
+      "wcag": "2.5.3 A",
+      "severity": "moderate",
+      "location": "src/components/ProductCard.jsx:31",
+      "summary": "The Add to Cart button's accessible name inserts the product name between visible words, so speech-input users may be unable to invoke it by its visible label.",
+      "fix": "Keep the visible label contiguous in the accessible name, such as `Add to Cart: ${product.name}`.",
+      "evidence": "Visible: “Add to Cart”; aria-label: `Add ${product.name} to cart`"
+    },
+    {
+      "rule": "ARIA-REL-001",
+      "wcag": "1.3.1 A",
+      "severity": "moderate",
+      "location": "src/App.jsx:281,439",
+      "summary": "The quantity controls put their group name on generic divs, which do not expose that name, leaving the quantity controls and value without a programmatic group label.",
+      "fix": "Use a `<fieldset>` with a `<legend>` naming the product quantity around each quantity control and its output.",
+      "evidence": "`<div className=\"quantity-control\" aria-label={`Quantity for ${product.name}`}>`"
+    },
+    {
+      "rule": "ARIA-ERROR-RELATION-001",
+      "wcag": "1.3.1 A",
+      "severity": "moderate",
+      "location": "src/components/ImageField.jsx:258",
+      "summary": "When URL preview validation fails, the input is marked invalid but its error is not associated with it, so users revisiting the field may not learn why it is invalid.",
+      "fix": "Set `aria-describedby=\"feature-image-error\"` on the URL input whenever an error is present.",
+      "evidence": "`aria-invalid` checks `error || imageError`, while `aria-describedby` checks only `error`."
+    }
+  ],
+  "passed": [
+    "Dialog labeling, semantics, focus handling and keyboard dismissal passed the inspected checks."
+  ],
+  "notes": [
+    "The Navbar trigger implementation was outside the requested scope, so its element semantics could not be verified."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "cravehub/src/App.jsx",
+    "cravehub/src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Hero actions are native buttons and appear before the non-interactive product images in DOM order.",
+    "Hero buttons have visible :focus-visible outlines; absolute CSS positioning does not change keyboard order.",
+    "At 320, 390, 768, 1024, and 1366 CSS pixels, all five product images loaded and their boxes remained inside the composition container.",
+    "The product layers retain z-index order 1 through 5, with pizza in front; hero copy and buttons remain separate from the composition at tablet and desktop widths."
+  ]
+}

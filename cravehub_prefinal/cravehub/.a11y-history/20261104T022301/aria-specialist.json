@@ -1,0 +1,16 @@
+{
+  "skill": "aria-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "The homepage keeps one H1 and uses section headings for its browsing areas.",
+    "Category filters expose pressed state and a visible checkmark for the selected category.",
+    "Product detail links have product-specific accessible names.",
+    "Cart quantity is included in the accessible name of the cart link."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "skill": "live-region-controller",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Cart quantity and removal changes announce the product context and updated total via the polite status region.",
+    "Persistence errors remain visible and announced.",
+    "Route changes move focus to main content, and checkout errors focus the relevant field."
+  ],
+  "notes": [
+    "The integrated browser confirmed contextual quantity/removal announcements and last-item focus behavior."
+  ]
+}

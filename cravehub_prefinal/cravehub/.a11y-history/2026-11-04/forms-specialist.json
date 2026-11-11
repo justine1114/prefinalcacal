@@ -1,0 +1,15 @@
+{
+  "skill": "forms-specialist",
+  "scope": [
+    "src/components/ProductForm.jsx",
+    "src/App.jsx",
+    "src/data/products.js",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Specifications textarea has a programmatic label, required semantics, and associated validation messaging.",
+    "Existing specifications populate the edit form and submitted specifications are saved with product data.",
+    "Browser testing confirmed custom specifications persist for both added and edited products after refresh."
+  ]
+}

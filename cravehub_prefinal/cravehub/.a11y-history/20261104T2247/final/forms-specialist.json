@@ -1,0 +1,14 @@
+{
+  "skill": "forms-specialist",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Required checkout labels have visible Required markers and a form-level explanation.",
+    "Email, Philippine mobile number, name, and delivery address validation show associated messages and focus invalid controls.",
+    "Pickup hides the address field, and required fields remain labeled and keyboard-operable.",
+    "Delivery and Pickup and all three payment methods use native radio controls."
+  ]
+}

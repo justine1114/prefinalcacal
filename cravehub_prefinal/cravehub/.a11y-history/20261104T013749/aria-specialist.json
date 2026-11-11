@@ -1,0 +1,15 @@
+{
+  "skill": "aria-specialist",
+  "scope": [
+    "src/components/ProductCard.jsx",
+    "src/App.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Product card buttons have accessible names independent of inventory text; the decorative plus is hidden from assistive technology.",
+    "Product Management presents quantity, subtotal, and status under table headers with column scope.",
+    "Product detail quantity controls retain accessible names, live output, and native disabled behavior.",
+    "The disabled purchase action remains visibly named 'Unavailable to order' without exposing inventory status."
+  ],
+  "notes": []
+}

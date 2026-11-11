@@ -1,0 +1,13 @@
+{
+  "skill": "aria-specialist",
+  "scope": [
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.jsx",
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Empty-cart content uses a heading-labelled section and a native link.",
+    "The decorative illustration is hidden from assistive technology.",
+    "The empty-cart state updates with cart contents; removing the last item focuses the page heading, and the status notice announces the removal."
+  ]
+}

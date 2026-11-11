@@ -1,0 +1,14 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.jsx",
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "The empty-cart Continue shopping link is a native keyboard-operable link to the menu route.",
+    "Route changes move focus to main; the page heading and main are programmatically focusable.",
+    "Skip link and visible focus styles are present.",
+    "Browser keyboard test confirmed the focused Continue shopping link navigates to the Menu route on Enter."
+  ]
+}

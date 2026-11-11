@@ -1,0 +1,16 @@
+{
+  "skill": "alt-text-headings",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Home and product-card image alternatives identify the products shown.",
+    "The homepage has one H1 and logical section headings.",
+    "Header, labeled navigation, main, and footer landmarks are present.",
+    "The document title is set for the home route and updates on route changes."
+  ]
+}

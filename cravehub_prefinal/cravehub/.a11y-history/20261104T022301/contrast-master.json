@@ -1,0 +1,27 @@
+{
+  "skill": "contrast-master",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "NON-TEXT-CONTROL-CONTRAST",
+      "wcag": "1.4.11 AA",
+      "severity": "moderate",
+      "location": "src/App.css:.upload-dropzone",
+      "summary": "The existing upload dropzone border has 2.11:1 contrast against its background, below the 3:1 control-boundary minimum.",
+      "fix": "Darken the upload dropzone border until it reaches at least 3:1 contrast against #fffaf7.",
+      "evidence": "The border is #c9a995 on a #fffaf7 background.",
+      "component": "Product Management image upload"
+    }
+  ],
+  "passed": [
+    "Selected category controls use a checkmark in addition to brand color."
+  ],
+  "notes": [
+    "The existing upload-dropzone contrast issue is in Product Management styling and was left unchanged to honor the requested scope."
+  ]
+}

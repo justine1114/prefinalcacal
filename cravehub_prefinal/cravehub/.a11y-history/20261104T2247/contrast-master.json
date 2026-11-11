@@ -1,0 +1,14 @@
+{
+  "skill": "contrast-master",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [],
+  "passed": [
+    "Checkout and confirmation text colors pass WCAG AA: body text is 7.01:1, error text 8.80:1, and confirmation total 6.22:1.",
+    "White text on the primary red button is 4.72:1.",
+    "Checkout field borders exceed the 3:1 non-text contrast minimum.",
+    "The focus outline exceeds 3:1 against white and cream."
+  ]
+}

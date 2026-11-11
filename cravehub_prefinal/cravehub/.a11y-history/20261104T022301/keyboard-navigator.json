@@ -1,0 +1,19 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Homepage hero actions and navigation links reach their intended destinations.",
+    "Home navigation returns to the top of the document, including the header.",
+    "The mobile navigation closes after selection and returns focus to its toggle.",
+    "Menu navigation focuses the search field when requested."
+  ],
+  "notes": [
+    "Automated axe, contrast, and keyboard scans were unavailable because Playwright is not installed; browser navigation and interactions were tested separately."
+  ]
+}

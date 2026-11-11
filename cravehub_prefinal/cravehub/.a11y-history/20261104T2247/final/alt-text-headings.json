@@ -1,0 +1,14 @@
+{
+  "skill": "alt-text-headings",
+  "scope": [
+    "src/App.jsx",
+    "src/App.css",
+    "src/components/ProductImage.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Cart, checkout, and confirmation have one H1 each and coherent heading levels.",
+    "The document title, skip link, main landmark, and footer landmark are present.",
+    "Cart product images are decorative because their adjacent headings identify the products."
+  ]
+}

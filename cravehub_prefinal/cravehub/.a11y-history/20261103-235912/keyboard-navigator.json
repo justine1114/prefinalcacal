@@ -1,0 +1,32 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx",
+    "src/components/ProductForm.jsx",
+    "src/components/ImageField.jsx",
+    "src/App.css",
+    "src/index.css"
+  ],
+  "findings": [
+    {
+      "rule": "KEYBOARD-FOCUS-001",
+      "wcag": "2.4.7 AA",
+      "severity": "moderate",
+      "location": "src/App.css:332-333",
+      "summary": "The main focus target has its focus outline removed, hiding focus after skip-link use and route changes.",
+      "fix": "Provide a visible focus style for main instead of removing its outline.",
+      "evidence": "main:focus { outline: none; }"
+    },
+    {
+      "rule": "KEYBOARD-FOCUS-001",
+      "wcag": "2.4.7 AA",
+      "severity": "moderate",
+      "location": "src/App.css:536-546",
+      "summary": "The menu and product-management search inputs suppress their focus outlines without a visible replacement.",
+      "fix": "Restore a visible focus outline on these inputs or style their wrappers with :focus-within.",
+      "evidence": "input:focus-visible { outline: none; }"
+    }
+  ]
+}

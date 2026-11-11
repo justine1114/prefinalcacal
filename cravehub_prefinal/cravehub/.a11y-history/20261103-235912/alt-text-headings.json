@@ -1,0 +1,39 @@
+{
+  "skill": "alt-text-headings",
+  "scope": [
+    "index.html",
+    "src/App.jsx",
+    "src/components/Navbar.jsx",
+    "src/components/ProductCard.jsx",
+    "src/components/ProductImage.jsx",
+    "src/components/ProductForm.jsx",
+    "src/components/ImageField.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "PAGE-TITLE-001",
+      "wcag": "2.4.2 A",
+      "severity": "moderate",
+      "location": "index.html:8",
+      "summary": "The static document title does not identify the active page after SPA navigation.",
+      "fix": "Set a descriptive title for each route, such as “Menu - CraveHub,” and update document.title when the route changes.",
+      "evidence": "<title>CraveHub - Your cravings, One Hub</title>"
+    },
+    {
+      "rule": "IMG-ALT-001",
+      "wcag": "1.1.1 A",
+      "severity": "moderate",
+      "confidence": "medium",
+      "location": "src/components/ImageField.jsx:269-271",
+      "summary": "The image preview alternatives name the preview but do not describe the selected image.",
+      "fix": "Use a product-specific text alternative for the preview and product image.",
+      "evidence": "alt=\"Selected product preview\"; alt=\"Image URL preview\"",
+      "component": "ImageField"
+    }
+  ],
+  "passed": [
+    "Heading hierarchy across inspected page states: one H1 per state and no skipped heading levels.",
+    "Page landmarks include a skip link, one main landmark, a labeled primary navigation and a footer.",
+    "Inspected images have alt attributes; decorative icons are hidden from assistive technology."
+  ]
+}

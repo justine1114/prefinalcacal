@@ -1,0 +1,48 @@
+{
+  "skill": "forms-specialist",
+  "scope": [
+    "src/components/ProductForm.jsx",
+    "src/components/ImageField.jsx",
+    "src/App.jsx",
+    "src/App.css"
+  ],
+  "findings": [
+    {
+      "rule": "FORMS-REQUIRED-STATE",
+      "wcag": "4.1.2 A",
+      "severity": "moderate",
+      "location": "src/components/ProductForm.jsx:115",
+      "summary": "Product fields marked Required lack programmatic required state, so assistive technology may not expose them as required controls.",
+      "fix": "Add the native required attribute to each required product input, select and textarea. In ImageField, apply required to the active file or URL input.",
+      "evidence": "The labels display “Required,” but the controls have no required attribute."
+    },
+    {
+      "rule": "FORMS-ERROR-FOCUS",
+      "wcag": "3.3.1 A",
+      "severity": "moderate",
+      "confidence": "medium",
+      "location": "src/components/ProductForm.jsx:71",
+      "summary": "The form focuses the first invalid control before React renders its error description, so screen readers may not announce the new error on focus.",
+      "fix": "Move focus after the error state has rendered, such as in an effect keyed to the submitted errors.",
+      "evidence": "`setErrors(nextErrors)` is followed immediately by focus."
+    },
+    {
+      "rule": "FORMS-ERROR-ASSOCIATION",
+      "wcag": "3.3.1 A",
+      "severity": "moderate",
+      "location": "src/components/ImageField.jsx:258",
+      "summary": "A URL preview error sets the URL input invalid but does not associate the error text with that input.",
+      "fix": "Set aria-describedby to feature-image-error when either error or imageError is present.",
+      "evidence": "aria-invalid checks error || imageError, while aria-describedby checks only error."
+    },
+    {
+      "rule": "FORMS-UPLOAD-INSTRUCTIONS",
+      "wcag": "3.3.2 A",
+      "severity": "moderate",
+      "location": "src/components/ImageField.jsx:225",
+      "summary": "The file input does not programmatically receive the visible accepted-format instructions.",
+      "fix": "Give the accepted-format instruction an id and reference it from the file input with aria-describedby.",
+      "evidence": "The file input has accepted formats but no aria-describedby for the visible instructions."
+    }
+  ]
+}

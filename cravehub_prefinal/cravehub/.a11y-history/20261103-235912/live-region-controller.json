@@ -1,0 +1,65 @@
+{
+  "skill": "live-region-controller",
+  "scope": [
+    "src/App.jsx",
+    "src/components/ProductForm.jsx",
+    "src/components/ImageField.jsx",
+    "src/components/ProductCard.jsx"
+  ],
+  "findings": [
+    {
+      "rule": "LIVE-001",
+      "wcag": "4.1.3 AA",
+      "severity": "moderate",
+      "location": "src/App.jsx:565",
+      "summary": "The app announcement region is removed when empty, so updates may insert the live region and its message simultaneously and go unannounced.",
+      "fix": "Render the role=status element continuously, even when empty, and update only its text; keep the dismiss control available only when a message exists.",
+      "evidence": "if (!children) return null"
+    },
+    {
+      "rule": "LIVE-002",
+      "wcag": "4.1.3 AA",
+      "severity": "moderate",
+      "location": "src/App.jsx:619",
+      "summary": "A successful cart save clears a preceding product-save error, so checkout or product editing can hide a persistence failure and announce success despite unsaved changes.",
+      "fix": "Track the outcome of each write in a multi-write operation; retain and announce any failure, and announce completion only when every required write succeeds.",
+      "evidence": "Both persistProducts and persistCart clear storageNotice after their own successful write."
+    },
+    {
+      "rule": "LIVE-003",
+      "wcag": "4.1.3 AA",
+      "severity": "moderate",
+      "location": "src/App.jsx:351",
+      "summary": "Product-management search and category filtering replace the table or empty state without announcing how many results remain.",
+      "fix": "Add an always-present polite status region that updates with the shown product count, including zero results, when search or category changes.",
+      "evidence": "{shownProducts.length ? ("
+    },
+    {
+      "rule": "LIVE-004",
+      "wcag": "4.1.3 AA",
+      "severity": "moderate",
+      "location": "src/App.jsx:611",
+      "summary": "The cart count changes after cart actions, but the count is not announced unless a user happens to revisit or focus the cart link.",
+      "fix": "Update a persistent polite status message with the new cart total whenever the count changes.",
+      "evidence": "const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0)"
+    },
+    {
+      "rule": "LIVE-005",
+      "wcag": "4.1.3 AA",
+      "severity": "moderate",
+      "location": "src/components/ImageField.jsx:289",
+      "summary": "The image-preview success status is conditionally mounted with its message, so assistive technology may not announce that URL validation succeeded.",
+      "fix": "Keep an empty role=status region mounted and update its text when preview validation succeeds; clear it when the input changes.",
+      "evidence": "{statusMessage && <p className=\"field-success\" role=\"status\">{statusMessage}</p>}"
+    },
+    {
+      "rule": "LIVE-006",
+      "wcag": "4.1.3 AA",
+      "severity": "moderate",
+      "location": "src/components/ImageField.jsx:284",
+      "summary": "Recoverable image validation errors use role=alert, which can interrupt users assertively for routine input feedback.",
+      "fix": "Use a polite, persistent status region for these recoverable messages and associate the error with the relevant input.",
+      "evidence": "<p className=\"field-error\" id=\"feature-image-error\" role=\"alert\">"
+    }
+  ]
+}

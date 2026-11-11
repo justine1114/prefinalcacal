@@ -1,0 +1,17 @@
+{
+  "skill": "contrast-master",
+  "scope": [
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.css",
+    "C:\\Users\\justi\\OneDrive\\Desktop\\cravehub_prefinal\\cravehub\\src\\App.jsx"
+  ],
+  "findings": [],
+  "passed": [
+    "Empty-cart eyebrow text (#b6322e on #fff8eb): 5.70:1; passes AA for small text.",
+    "Empty-cart body text (#65564f on white): 7.01:1; passes AA for small text.",
+    "Red CTA with white text (#d63732 on #fff): 4.72:1; passes AA for normal text.",
+    "Illustration is marked aria-hidden and its details are decorative; no essential graphic contrast issue found."
+  ],
+  "notes": [
+    "The card border (#e7dccb) has low contrast against the cream page (1.28:1) and white card (1.36:1), but it outlines a non-interactive container rather than an essential control or state indicator."
+  ]
+}

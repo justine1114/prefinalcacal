@@ -1,0 +1,17 @@
+{
+  "skill": "keyboard-navigator",
+  "scope": [
+    "src/App.jsx",
+    "src/data/products.js"
+  ],
+  "findings": [],
+  "passed": [
+    "Initialization does not add or remove controls or call focus APIs.",
+    "Route-change focus management is independent of product initialization.",
+    "Product card focus order follows the rendered DOM order."
+  ],
+  "notes": [
+    "Rating data can change the relative order of cards in the homepage favorites and bestsellers sections; keyboard traversal follows that same rendered order.",
+    "Assessment was based on static source review; no runtime keyboard test was performed."
+  ]
+}
